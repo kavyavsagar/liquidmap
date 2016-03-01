@@ -1,0 +1,56 @@
+<section class="header-nav header-nav-search">
+    <div class="container-fluid">
+        <div class="row">      
+            <div class="col-md-6"> 
+                 <div class="input-group apt-search">
+                 <form ng-submit="showAddress()">
+                    <input id="addr" name="addr" type="text" placeholder="Search by city,zip or landmark" class="form-control fluid-search"/>
+                    <!-- <a class="mylocatn" href="#" ng-click="getLocation()"></a>-->
+                    <span class="input-group-btn">
+                        <button  class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </span> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-------------- MAP ------------------>
+
+<!-- map minimizer -->
+<div id="minimize" style="position:absolute; top:0; right:-1px; width: 21px; height: 21px; cursor: pointer; z-index: 100; ">
+<img src="assets/images/left_arrow.gif" ng-click="togglePanel()" title="Show panel" />
+</div>
+
+<div id="wrapper" style="position:absolute;left:0; width:100%; height:100%; z-index: 0;">
+
+<div id="gmap" ng-init="init()"></div>
+
+<div id="rightpanel">
+
+<div id="panel-tabs" >
+
+    <!-- map maximizer -->
+    <img src="assets/images/right_arrow.gif" ng-click="togglePanel('left')" alt="Hide panel" title="Hide panel" style="float:left; margin:0 8px 4px 0; width:12px; height:22px;cursor: pointer;"/>
+
+
+</div><!-- end panel-tabs-->
+
+
+<div id="allpanelCards">
+
+
+<div id="listing">    
+    <ul id="places" class="menu"></ul>
+</div><!-- end listing -->
+<div class="show-btn-sec">
+    <button id="more" type="button" class="btn-liquid">Show More >></button>
+</div>
+</div><!-- end listing -->
+
+</div>
+</div><!-- end allpanelCards, leftpanel, wrapper -->
+
+<div class="clearfix"></div>
